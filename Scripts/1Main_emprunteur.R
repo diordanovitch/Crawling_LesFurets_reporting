@@ -5,16 +5,17 @@
 
 
 
-crawling_file = "./Crawling/ASSURLAND_LOAN_prices_March.csv" 
+new_crawling_file = "./Crawling/ASSURLAND_LOAN_prices_March.csv"  # "./Crawling/lesfurets_prices_june18.csv"
+old_crawling_file = "./Crawling/ASSURLAND_LOAN_prices_june.csv"  # "./Crawling/lesfurets_price_march18.csv" 
 
-lp = "Y17W46"    # lastperiod, from where we want to update, Y--W-- format.
-weekormonth = 46 # to adapt according to lp
-year = 2017      # to adapt according to lp
+lp = "Y18W10"    # lastperiod, from where we want to update, Y--W-- format.
+weekormonth = 10 # to adapt according to lp
+year = 2018      # to adapt according to lp
 
 
 Source = "MONTHLY"  # always for loan process
 
-Report = "Assurland_Loan" # loan process
+Report = "Assurland_Loan" # loan process, Assurland_Loan or Lesfurets_Loan
 
 
 

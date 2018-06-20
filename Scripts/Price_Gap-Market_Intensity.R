@@ -17,15 +17,15 @@ for(i in 1:13)
 
 
 
-## We load the data, and we transform it.
-
-load("./Tables/New_Table_Assurland_emp.RData") # New crawling
-load("./Tables/data_Assurland_emp.RData") # Merged crawling
-New_Table$type = "UNKNOWN"
-New_Table[New_Table$insurer%in%CLASSIQUEPlayers,]$type = "CLASSIQUE"
-New_Table[New_Table$insurer%in%ALTERNATIFSPlayers,]$type = "ALTERNATIFS"
-New_Table[New_Table$insurer%in%BANCASSUREURPlayers,]$type = "BANCASSUREUR"
-New_Table[New_Table$insurer%in%MUTUELLEPlayers,]$type = "MUTUELLE"
+# ## We load the data, and we transform it.
+# 
+# load("./Tables/New_Table_Assurland_emp.RData") # New crawling
+# load("./Tables/data_Assurland_emp.RData") # Merged crawling
+# New_Table$type = "UNKNOWN"
+# New_Table[New_Table$insurer%in%CLASSIQUEPlayers,]$type = "CLASSIQUE"
+# New_Table[New_Table$insurer%in%ALTERNATIFSPlayers,]$type = "ALTERNATIFS"
+# New_Table[New_Table$insurer%in%BANCASSUREURPlayers,]$type = "BANCASSUREUR"
+# New_Table[New_Table$insurer%in%MUTUELLEPlayers,]$type = "MUTUELLE"
 
 
 
@@ -72,7 +72,7 @@ for(p in sort(unique(frdata1_new$yearmonth)))
     pricegap_predata_1 = data.frame(period = p, coverage = c, x = res$x,y = res$y)
     pricegap_predata = rbind(pricegap_predata, pricegap_predata_1)
 
-  }
+  } 
 }
 
 save(pricegap_predata,file="./Tables/pricegap_emp.RData")

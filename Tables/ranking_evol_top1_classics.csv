@@ -1,11 +1,11 @@
-"","insurer","coverage","period.x","yearmonth.x","rank.x","proportion.x","period.y","yearmonth.y","rank.y","proportion.y","var_prop"
-"1","AXA","Formule Optimum","Y17W46","Y17M11",1,1,"Y18W11","Y18M03",1,2,1
-"2","AXA","Minimum","Y17W46","Y17M11",1,4,"Y18W11","Y18M03",1,11,1.8
-"3","Cardif","Formule Optimum","Y17W46","Y17M11",1,1,"Y18W11","Y18M03",1,7,6
-"4","Cardif","Minimum","Y17W46","Y17M11",1,2,"Y18W11","Y18M03",1,7,2.5
-"5","Groupe AVIVA","Formule Optimum","Y17W46","Y17M11",1,1,"Y18W11","Y18M03",1,5,4
-"6","Groupe AVIVA","Minimum","Y17W46","Y17M11",1,17,"Y18W11","Y18M03",1,22,0.3
-"7","Groupe AXA","Formule Optimum","Y17W46","Y17M11",1,95,"Y18W11","Y18M03",1,75,-0.2
-"8","Groupe AXA","Minimum","Y17W46","Y17M11",1,73,"Y18W11","Y18M03",1,54,-0.3
-"9","MAAF Assurances","Formule Optimum","Y17W46","Y17M11",1,2,"Y18W11","Y18M03",1,10,4
-"10","MAAF Assurances","Minimum","Y17W46","Y17M11",1,5,"Y18W11","Y18M03",1,8,0.6
+"","insurer","coverage","profilID.x","price.x","Segment.x","cumsum2.x","proportion.x","profilID.y","period.y","Segment.y","cumsum2.y","proportion.y","var_prop"
+"1","AXA","Minimum",NA,NA,NA,NA,NA,"LOAN2017_337","Y18W11","Global",418,11,NA
+"2","AXA","All",NA,NA,NA,NA,NA,"LOAN2017_337","Y18W11","Global",220,2,NA
+"3","Cardif","Minimum",NA,NA,NA,NA,NA,"LOAN2017_428","Y18W11","Global",418,7,NA
+"4","Cardif","All",NA,NA,NA,NA,NA,"LOAN2017_428","Y18W11","Global",220,7,NA
+"5","Groupe AVIVA","Minimum",NA,NA,NA,NA,NA,"LOAN2017_107","Y18W11","Global",418,22,NA
+"6","Groupe AVIVA","All",NA,NA,NA,NA,NA,"LOAN2017_161","Y18W11","Global",220,5,NA
+"7","Groupe AXA","Minimum",NA,NA,NA,NA,NA,"LOAN2017_64","Y18W11","Global",418,54,NA
+"8","Groupe AXA","All",NA,NA,NA,NA,NA,"LOAN2017_64","Y18W11","Global",220,75,NA
+"9","MAAF Assurances","Minimum",NA,NA,NA,NA,NA,"LOAN2017_361","Y18W11","Global",418,8,NA
+"10","MAAF Assurances","All",NA,NA,NA,NA,NA,"LOAN2017_110","Y18W11","Global",220,10,NA

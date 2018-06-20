@@ -1,4 +1,10 @@
-profils <- read.csv(file="./Crawlings/profils_LOAN_FR.csv", header=TRUE, sep=";")
+if (Report == "Assurland_Loan") {
+  profils <- read.csv(file="./Crawling/profils_ASSURLAND_LOAN_FR.csv", header=TRUE, sep=";")
+} else if (Report == "Lesfurets_Loan") {
+  profils <- read.csv(file="./Crawling/20180608 - Loan_Profiles_LF.csv", header=TRUE, sep=";")
+}
+
+
 
 
 colnames(profils)[3] = "profilID"
@@ -15,7 +21,7 @@ New_Table_PCA$type =""
 New_Table_PCA[New_Table_PCA$insurer%in%CLASSIQUEPlayers,]$type="CLASSIQUE"
 New_Table_PCA[New_Table_PCA$insurer%in%ALTERNATIFSPlayers,]$type="ALTERNATIFS"
 New_Table_PCA[New_Table_PCA$insurer%in%BANCASSUREURPlayers,]$type="BANCASSUREUR"
-New_Table_PCA[New_Table_PCA$insurer%in%MUTUELLEPlayers,]$type="MUTUELLE"
+# New_Table_PCA[New_Table_PCA$insurer%in%MUTUELLEPlayers,]$type="MUTUELLE"  # A REMETTRE
 
 New_Table_PCA$type = as.factor(New_Table_PCA$type)
 

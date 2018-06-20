@@ -17,18 +17,18 @@ MUTUELLEPlayers <- c("MAAF Assurances")
 
 BANCASSUREURPlayers <- c("Cardif") 
 
-CLASSIQUEPlayers <- c("Groupe AVIVA", "AXA","Groupe AXA", "Metlife", "Swisslife", "April")
+CLASSIQUEPlayers <- c("Groupe AVIVA", "AXA","Groupe AXA", "Metlife", "Swisslife", "April", "Suravenir")
 
-ALTERNATIFSPlayers <- c("AFI-ESCA","Alptis","AsCourtage","CSF Assurances","Hodeva","Zen'up", "Simpl'Assur", "Magnolia")
+ALTERNATIFSPlayers <- c("AFI-ESCA","Alptis","AsCourtage","CSF Assurances","Hodeva","Zen'up", "Simpl'Assur", "Magnolia", "Naoassur", "Prévoir")
 
-BENCHMARKPlayers <-c("MAAF Assurances","Cardif","Groupe AVIVA", "AXA", "SIMPL'ASSUR","Groupe AXA","Zen'up")
+MAINPlayers <-c("MAAF Assurances","Cardif","Groupe AVIVA", "AXA", "SIMPL'ASSUR","Groupe AXA","Zen'up", "Suravenir", "April")
 
-All<-c("MAAF Assurances","Cardif","Groupe AVIVA", "AXA", "Simpl'Assur","Groupe AXA","AFI-ESCA","Alptis","AsCourtage","CSF Assurances","Hodeva","Zen'up", "Metlife", "Swisslife", "Magnolia", "April")
+All<-c("MAAF Assurances","Cardif","Groupe AVIVA", "AXA", "Simpl'Assur","Groupe AXA","AFI-ESCA","Alptis","AsCourtage","CSF Assurances","Hodeva","Zen'up", "Metlife", "Swisslife", "Magnolia", "April", "Naoassur", "Prévoir", "Suravenir")
 
 
 
-Types <- c("CLASSIQUE","MUTUELLE","BANCASSUREUR","ALTERNATIFS", "BENCHMARK") 
-TypesC <- data.frame(types = Types,typesComplete = c("CLASSIQUE","MUTUELLE","BANCASSUREUR", "ALTERNATIFS", "BENCHMARK"))
+Types <- c("CLASSIQUE","MUTUELLE","BANCASSUREUR","ALTERNATIFS", "MAIN") 
+TypesC <- data.frame(types = Types,typesComplete = c("CLASSIQUE","MUTUELLE","BANCASSUREUR", "ALTERNATIFS", "MAIN"))
 
 
 

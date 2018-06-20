@@ -41,56 +41,56 @@ unique(New_Table_complete$CSP)
 
 
 
-### Lasso ###
-
-
-Table_ZENUP <- New_Table_complete[,-c(1,5,6,7,38)]
-
-Table_ZENUP <- Table_ZENUP %>% filter(insurer=="Zen'up")
-
-y_ZENUP <- Table_ZENUP$price 
-
-y_ZENUP_Opt <- Table_ZENUP %>% filter(coverage=='Formule Optimum')
-y_ZENUP_Opt <- y_ZENUP_Opt$price
-
-
-Table_ZENUP <- Table_ZENUP[,-c(1,3)]
-
-Table_ZENUP_Min <- Table_ZENUP %>% filter(coverage=='Minimum')
-Table_ZENUP_Opt <- Table_ZENUP %>% filter(coverage=='Formule Optimum')
-
-Table_ZENUP_Min <- Table_ZENUP_Min[,-c(1, 19:30)]
-Table_ZENUP_Opt <- Table_ZENUP_Opt[,-c(1, 19:30)]
- 
-
-
-Table_ZENUP_Opt$firstloan_rate <- sub(",", ".", Table_ZENUP_Opt$firstloan_rate)
-Table_ZENUP_Opt[,c(2,3,6)] <- sapply(Table_ZENUP_Opt[,c(2,3,6)], as.numeric)
-
-
-Dummy_ZENUP_Opt <- model.matrix( ~ .-1, Table_ZENUP_Opt[,c(1,4,5,10,12,13,14,15,16,17,18,19)])
-
-
-
-
-fit = glmnet(Dummy_ZENUP_Opt, as.numeric(unlist(y_ZENUP_Opt)), family ="gaussian")
-
-
-cvfit = cv.glmnet(Dummy_ZENUP_Opt, as.numeric(unlist(y_ZENUP_Opt)), alpha=1)
-
-coef(cvfit, s="lambda.min")
-
-
-plot(cvfit)
-
-cvfit
-
-cvfit$lambda.min
-
-
-fit
-
-coef(fit)[,76]
+# ### Lasso ###
+# 
+# 
+# Table_ZENUP <- New_Table_complete[,-c(1,5,6,7,38)]
+# 
+# Table_ZENUP <- Table_ZENUP %>% filter(insurer=="Zen'up")
+# 
+# y_ZENUP <- Table_ZENUP$price 
+# 
+# y_ZENUP_Opt <- Table_ZENUP %>% filter(coverage=='Formule Optimum')
+# y_ZENUP_Opt <- y_ZENUP_Opt$price
+# 
+# 
+# Table_ZENUP <- Table_ZENUP[,-c(1,3)]
+# 
+# Table_ZENUP_Min <- Table_ZENUP %>% filter(coverage=='Minimum')
+# Table_ZENUP_Opt <- Table_ZENUP %>% filter(coverage=='Formule Optimum')
+# 
+# Table_ZENUP_Min <- Table_ZENUP_Min[,-c(1, 19:30)]
+# Table_ZENUP_Opt <- Table_ZENUP_Opt[,-c(1, 19:30)]
+#  
+# 
+# 
+# Table_ZENUP_Opt$firstloan_rate <- sub(",", ".", Table_ZENUP_Opt$firstloan_rate)
+# Table_ZENUP_Opt[,c(2,3,6)] <- sapply(Table_ZENUP_Opt[,c(2,3,6)], as.numeric)
+# 
+# 
+# Dummy_ZENUP_Opt <- model.matrix( ~ .-1, Table_ZENUP_Opt[,c(1,4,5,10,12,13,14,15,16,17,18,19)])
+# 
+# 
+# 
+# 
+# fit = glmnet(Dummy_ZENUP_Opt, as.numeric(unlist(y_ZENUP_Opt)), family ="gaussian")
+# 
+# 
+# cvfit = cv.glmnet(Dummy_ZENUP_Opt, as.numeric(unlist(y_ZENUP_Opt)), alpha=1)
+# 
+# coef(cvfit, s="lambda.min")
+# 
+# 
+# plot(cvfit)
+# 
+# cvfit
+# 
+# cvfit$lambda.min
+# 
+# 
+# fit
+# 
+# coef(fit)[,76]
 
 
 
@@ -128,12 +128,21 @@ tree_ZENUP_Min <- rpart(Prime~., data=Table_ZENUP_light, control=rpart.control(m
 prp(tree_ZENUP_Min, extra=1, fallen.leaves = T)
 
 
-# Optimum - Complete
+if (Report=="Lesfurets_Loan") {
+  # Medium - Complete
+  
+  # Medium - Light
+  
+}
+
+
+
+# All - Complete
 
 
 Table_ZENUP <- New_Table_complete[,-c(1,5,6,7,38)]
 Table_ZENUP <- Table_ZENUP %>% filter(insurer=="Zen'up")
-Table_ZENUP <- Table_ZENUP %>% filter(coverage == 'Formule Optimum')
+Table_ZENUP <- Table_ZENUP %>% filter(coverage == 'All')
 Table_ZENUP_light <- Table_ZENUP[,c(3,6,10,14,17,34)]
 names(Table_ZENUP_light) <- c("Prime", "Montant emprunt", "Durée emprunt", "Âge", "Profession" ,"CSP")
 Table_ZENUP_light <- Table_ZENUP_light[,c(1,2,3,4,5)]
@@ -144,7 +153,7 @@ prp(tree_ZENUP_Opt, extra=1)
 
 
 
-# Optimum - Light
+# All - Light
 
 Table_ZENUP_light <- Table_ZENUP[,c(3,6,10,14,17,34)]
 names(Table_ZENUP_light) <- c("Prime", "Montant emprunt", "Durée emprunt", "Âge", "Profession" ,"CSP")
@@ -211,10 +220,10 @@ text(y=fivenum(Table_Min$price[node6]), labels =fivenum(Table_Min$price[node6]),
 
 
 
-#  Optimum - Light
+#  All - Light
 
-Table_DA <- Table_Benchmark %>% filter(insurer=="Groupe AXA" & coverage == 'Formule Optimum')
-Table_Opt <- Table_Benchmark %>% filter(coverage == 'Formule Optimum')
+Table_DA <- Table_Benchmark %>% filter(insurer=="Groupe AXA" & coverage == 'All')
+Table_Opt <- Table_Benchmark %>% filter(coverage == 'All')
 
 
 node1 <- which(Table_DA$firstloan_amount<=265e+3 & Table_DA$primary_applicant_age<=28)

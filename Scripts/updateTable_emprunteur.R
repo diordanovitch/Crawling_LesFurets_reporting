@@ -16,9 +16,15 @@ Week <-weekormonth
 
 source("./Scripts/2Libraries_emprunteur.R")
 source("./Scripts/3function for reporting_Generic_emprunteur.R") 
-source("./Scripts/7Parameters_emprunteur.R") #• new
+source("./Scripts/7Parameters_emprunteur.R") 
 
-source(file = "./Scripts/Data_process_Emprunteur.R")
+if (Report == "Assurland_Loan") {
+  source(file = "./Scripts/Data_process_Emprunteur.R")
+} else if (Report == "Lesfurets_Loan") {
+  source(file = "./Scripts/Data_process_Emprunteur_LF.R")
+}
+
+
 
 
 
@@ -46,7 +52,8 @@ save(New_Table, file = "./Tables/New_Table_Assurland_emp.RData")
 
 #crawling_old <- read.csv(file="Crawling data/Assurland_Loan_prices_June.csv", header=TRUE, sep=";")
 
-crawling_old <- get(load(file="./Tables/data_Assurland_emp.RData"))
+
+
 
 
 crawling_old <- crawling_old[!crawling_old$period %in% unique(as.character(New_Table$period)),!colnames(crawling_old) %in% c("type","id","formula","profilid")]
@@ -59,8 +66,6 @@ crawling_all <- crawling_all[!duplicated(crawling_all[,c("profilID","period","ye
 
 
 
-
-
 crawling_all$Segment <- "Global"
-save(crawling_all, file = "./Tables/data_Assurland_emp.RData")
+save(crawling_all, file = "./Tables/crawling_all.RData")
   

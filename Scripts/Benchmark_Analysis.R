@@ -18,14 +18,15 @@ sum(Table_Benchmark$primary_applicant_share == 1) / length(Table_Benchmark$prima
 
 ## We compare the number of prestations between 2 periods to see the width of the filtration (just DA).
 
-
-Old_Table <- crawling_all[crawling_all$period %in% "Y17W46",]
-
-Filtration = ( nrow(New_Table[New_Table$insurer %in% "Groupe AXA",]) / nrow(Old_Table[Old_Table$insurer %in% "Groupe AXA",]) ) - 1
-
-Filtration_Opt = ( nrow(New_Table[New_Table$insurer %in% "Groupe AXA" & New_Table$coverage %in% 'Formule Optimum',]) / nrow(Old_Table[Old_Table$insurer %in% "Groupe AXA" & Old_Table$coverage %in% 'Formule Optimum',]) ) - 1
-
-Filtration_Min = ( nrow(New_Table[New_Table$insurer %in% "Groupe AXA" & New_Table$coverage %in% 'Minimum',]) / nrow(Old_Table[Old_Table$insurer %in% "Groupe AXA" & Old_Table$coverage %in% 'Minimum',]) ) - 1
+if (Report == "Assurland_Loan"){
+  Old_Table <- crawling_all[crawling_all$period %in% "Y17W46",]
+  
+  Filtration = ( nrow(New_Table[New_Table$insurer %in% "Groupe AXA",]) / nrow(Old_Table[Old_Table$insurer %in% "Groupe AXA",]) ) - 1
+  
+  Filtration_Opt = ( nrow(New_Table[New_Table$insurer %in% "Groupe AXA" & New_Table$coverage %in% 'All',]) / nrow(Old_Table[Old_Table$insurer %in% "Groupe AXA" & Old_Table$coverage %in% 'All',]) ) - 1
+  
+  Filtration_Min = ( nrow(New_Table[New_Table$insurer %in% "Groupe AXA" & New_Table$coverage %in% 'Minimum',]) / nrow(Old_Table[Old_Table$insurer %in% "Groupe AXA" & Old_Table$coverage %in% 'Minimum',]) ) - 1
+} else if (Report == "Lesfurets_Loan") {}
 
 
 
@@ -402,7 +403,7 @@ Data$firstloan_amount = as.numeric(Data$firstloan_amount)
 
 table <- NULL
 table_amount_all <-  NULL
-coventity = 'Formule Optimum'
+coventity = covfr
 
 for (insurer in BENCHMARK) {
   for (k in 1:length(coventity)) {
