@@ -21,7 +21,7 @@ New_Table_PCA$type =""
 New_Table_PCA[New_Table_PCA$insurer%in%CLASSIQUEPlayers,]$type="CLASSIQUE"
 New_Table_PCA[New_Table_PCA$insurer%in%ALTERNATIFSPlayers,]$type="ALTERNATIFS"
 New_Table_PCA[New_Table_PCA$insurer%in%BANCASSUREURPlayers,]$type="BANCASSUREUR"
-# New_Table_PCA[New_Table_PCA$insurer%in%MUTUELLEPlayers,]$type="MUTUELLE"  # A REMETTRE
+New_Table_PCA[New_Table_PCA$insurer%in%MUTUELLEPlayers,]$type="MUTUELLE"  
 
 New_Table_PCA$type = as.factor(New_Table_PCA$type)
 

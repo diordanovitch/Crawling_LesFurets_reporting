@@ -1,1 +1,13 @@
-"","insurer","coverage","profilID.x","price.x","Segment.x","cumsum2.x","proportion.x","profilID.y","period.y","Segment.y","cumsum2.y","proportion.y","var_prop"
+"","insurer","coverage","profilID.x","price.x","rank.x","proportion.x","profilID.y","price.y","rank.y","proportion.y","var_prop"
+"1","Groupe AXA","All","FUR2018_33",4611,1,31,"FUR2018_5",4381,1,32,0
+"2","Groupe AXA","Medium","FUR2018_5",2680,1,72,"FUR2018_3",3415,1,74,0
+"3","Groupe AXA","Minimum","FUR2018_1",1857,1,35,"FUR2018_41",1649,1,35,0
+"4","April","All","FUR2018_35",5813,1,20,"FUR2018_31",5151,1,19,-0.1
+"5","April","Minimum","FUR2018_50",2438,1,13,"FUR2018_67",2463,1,15,0.2
+"6","Cardif","All","FUR2018_21",3802,1,21,"FUR2018_6",4432,1,26,0.2
+"7","Cardif","Minimum","FUR2018_2",2144,1,18,"FUR2018_33",1179,1,24,0.3
+"8","Metlife","All","FUR2018_9",3767,1,14,"FUR2018_129",2122,1,11,-0.2
+"9","Metlife","Minimum","FUR2018_3",2190,1,19,"FUR2018_2",2967,1,15,-0.2
+"10","Swisslife","All","FUR2018_91",1699,1,14,"FUR2018_82",3520,1,12,-0.1
+"11","Swisslife","Medium","FUR2018_29",3332,1,28,"FUR2018_46",2717,1,26,-0.1
+"12","Swisslife","Minimum","FUR2018_4",2355,1,15,"FUR2018_86",2168,1,11,-0.3

@@ -19,7 +19,7 @@ sum(Table_Benchmark$primary_applicant_share == 1) / length(Table_Benchmark$prima
 ## We compare the number of prestations between 2 periods to see the width of the filtration (just DA).
 
 if (Report == "Assurland_Loan"){
-  Old_Table <- crawling_all[crawling_all$period %in% "Y17W46",]
+  Old_Table <- crawling_all[crawling_all$period %in% lp,]
   
   Filtration = ( nrow(New_Table[New_Table$insurer %in% "Groupe AXA",]) / nrow(Old_Table[Old_Table$insurer %in% "Groupe AXA",]) ) - 1
   
@@ -232,7 +232,7 @@ write.csv(Table_Benchmark_Global_jobs, "./Tables/Price_by_Job.csv")
 ## which are both in 2 periods).
 
 
-Old_Table <- crawling_all[crawling_all$period %in% "Y17W46",]
+Old_Table <- crawling_all[crawling_all$period %in% lp,]
 
 
 Comparative_Table = merge(New_Table, Old_Table, by=c('profilID', 'insurer', 'coverage'), all.x = TRUE, all.y = TRUE)
@@ -290,7 +290,7 @@ Comparative_Table_bias <- Comparative_Table_bias %>% filter(abs(Delta) > 0.2)
 
 ## Same, but more precise, for Direct Assurance only.
 
-Old_Table <- crawling_all[crawling_all$period %in% "Y17W46",]
+Old_Table <- crawling_all[crawling_all$period %in% lp,]
 
 
 Comparative_Table_DA = merge(New_Table, Old_Table, by=c('profilID', 'insurer', 'coverage'), all.x = TRUE, all.y = TRUE)

@@ -62,10 +62,11 @@ crawling_old <- crawling_old[c(1,2,3,4,5,10,6,7,8,9,11)]
 
 crawling_new$period <- paste( "Y",substr(crawling_new$year,3,4), "W",formatC(crawling_new$week,width=2, flag="0") , sep = "")
 crawling_new$yearmonth <- paste( "Y",substr(crawling_new$year,3,4), "M",formatC(crawling_new$month,width=2, flag="0") , sep = "")
-
+unique(crawling_new$period) <- ap #actual period
 
 crawling_old$period <- paste( "Y",substr(crawling_old$year,3,4), "W",formatC(crawling_old$week,width=2, flag="0") , sep = "")
 crawling_old$yearmonth <- paste( "Y",substr(crawling_old$year,3,4), "M",formatC(crawling_old$month,width=2, flag="0") , sep = "")
+
 
 
 ## Remove useless columns

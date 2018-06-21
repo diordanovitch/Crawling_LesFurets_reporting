@@ -1,11 +1,13 @@
-"","insurer","coverage","profilID.x","price.x","Segment.x","cumsum2.x","proportion.x","profilID.y","period.y","Segment.y","cumsum2.y","proportion.y","var_prop"
-"1","AXA","Minimum",NA,NA,NA,NA,NA,"LOAN2017_337","Y18W11","Global",418,11,NA
-"2","AXA","All",NA,NA,NA,NA,NA,"LOAN2017_337","Y18W11","Global",220,2,NA
-"3","Cardif","Minimum",NA,NA,NA,NA,NA,"LOAN2017_428","Y18W11","Global",418,7,NA
-"4","Cardif","All",NA,NA,NA,NA,NA,"LOAN2017_428","Y18W11","Global",220,7,NA
-"5","Groupe AVIVA","Minimum",NA,NA,NA,NA,NA,"LOAN2017_107","Y18W11","Global",418,22,NA
-"6","Groupe AVIVA","All",NA,NA,NA,NA,NA,"LOAN2017_161","Y18W11","Global",220,5,NA
-"7","Groupe AXA","Minimum",NA,NA,NA,NA,NA,"LOAN2017_64","Y18W11","Global",418,54,NA
-"8","Groupe AXA","All",NA,NA,NA,NA,NA,"LOAN2017_64","Y18W11","Global",220,75,NA
-"9","MAAF Assurances","Minimum",NA,NA,NA,NA,NA,"LOAN2017_361","Y18W11","Global",418,8,NA
-"10","MAAF Assurances","All",NA,NA,NA,NA,NA,"LOAN2017_110","Y18W11","Global",220,10,NA
+"","insurer","coverage","profilID.x","price.x","rank.x","proportion.x","profilID.y","price.y","rank.y","proportion.y","var_prop"
+"1","Groupe AXA","All","FUR2018_10",3860,1,27,"FUR2018_5",4381,1,29,0.1
+"2","Groupe AXA","Medium","FUR2018_5",2680,1,68,"FUR2018_3",3415,1,71,0
+"3","Groupe AXA","Minimum","FUR2018_1",1857,1,29,"FUR2018_10",3202,1,33,0.1
+"4","April","All","FUR2018_22",4420,1,21,"FUR2018_31",5151,1,20,0
+"5","April","Minimum","FUR2018_39",2642,1,17,"FUR2018_38",1770,1,14,-0.2
+"6","Cardif","All","FUR2018_11",3957,1,24,"FUR2018_6",4432,1,25,0
+"7","Cardif","Minimum","FUR2018_2",2144,1,20,"FUR2018_33",1179,1,25,0.2
+"8","Metlife","All","FUR2018_9",3767,1,16,"FUR2018_30",4547,1,14,-0.1
+"9","Metlife","Minimum","FUR2018_3",2190,1,20,"FUR2018_2",2967,1,16,-0.2
+"10","Swisslife","All","FUR2018_12",4480,1,12,"FUR2018_82",3520,1,12,0
+"11","Swisslife","Medium","FUR2018_29",3332,1,32,"FUR2018_17",5668,1,29,-0.1
+"12","Swisslife","Minimum","FUR2018_4",2355,1,14,"FUR2018_86",2168,1,12,-0.1

@@ -14,14 +14,14 @@ Week <-weekormonth
 
 ## We run the others R files  
 
-source("./Scripts/2Libraries_emprunteur.R")
-source("./Scripts/3function for reporting_Generic_emprunteur.R") 
-source("./Scripts/7Parameters_emprunteur.R") 
+source("./Scripts/3Libraries_emprunteur.R")
+source("./Scripts/4function for reporting_Generic_emprunteur.R") 
+source("./Scripts/5Parameters_emprunteur.R") 
 
 if (Report == "Assurland_Loan") {
-  source(file = "./Scripts/Data_process_Emprunteur.R")
+  source(file = "./Scripts/6Data_process_Emprunteur.R")
 } else if (Report == "Lesfurets_Loan") {
-  source(file = "./Scripts/Data_process_Emprunteur_LF.R")
+  source(file = "./Scripts/6Data_process_Emprunteur_LF.R")
 }
 
 
@@ -68,4 +68,5 @@ crawling_all <- crawling_all[!duplicated(crawling_all[,c("profilID","period","ye
 
 crawling_all$Segment <- "Global"
 save(crawling_all, file = "./Tables/crawling_all.RData")
+save(crawling_all, file = "./Tables/data_Assurland_emp.RData")
   
